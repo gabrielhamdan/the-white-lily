@@ -51,7 +51,7 @@ void move_player(int8_t direction, UBYTE shouldStop) {
     if(shouldStop && currentSpeed > 0) {
         minVelocityCounter++;
 
-        if(minVelocityCounter == 8) {
+        if(minVelocityCounter == 10) {
             currentSpeed -= acceleration;
             minVelocityCounter = 0;
         }
