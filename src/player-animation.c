@@ -1,7 +1,13 @@
 #include <gb/gb.h>
 #include "include/utils.h"
 
-extern Metasprite Player; 
+extern Metasprite Player;
+extern uint8_t acceleration;
+
+uint8_t propellerAnimationCnt = 0;
+uint8_t propellerAnimationFrame = 2;
+uint8_t hoverAnimationCnt = 0;
+uint8_t idleSpriteIndex = 0;
 
 void set_idle_sprites() {
     set_sprite_tile(0, 1);
@@ -45,4 +51,43 @@ void set_idle_sprites() {
     move_sprite(9, Player.position[0] + 15, Player.position[1] + 16);
 
     Player.animation = 0x10;
+}
+
+void play_idle_animation() {
+    set_sprite_tile(1, propellerAnimationFrame);
+    set_sprite_tile(2, propellerAnimationFrame);
+
+    propellerAnimationCnt++;
+    hoverAnimationCnt++;
+
+    if(propellerAnimationCnt == 5) {
+        propellerAnimationCnt = 0;
+
+        if(propellerAnimationFrame == 2) {
+            propellerAnimationFrame = 3;
+        } else {
+            propellerAnimationFrame = 2;
+        }
+    }
+
+    if(acceleration == 0) {
+        if(hoverAnimationCnt == 0) {
+            for(idleSpriteIndex = 0; idleSpriteIndex != 11; idleSpriteIndex++)
+                scroll_sprite(idleSpriteIndex, 0, -1);
+        } else if(hoverAnimationCnt == 20) {
+            for(idleSpriteIndex = 0; idleSpriteIndex != 11; idleSpriteIndex++)
+                scroll_sprite(idleSpriteIndex, 0, -1);
+        } else if(hoverAnimationCnt == 70) {
+            for(idleSpriteIndex = 0; idleSpriteIndex != 11; idleSpriteIndex++)
+                scroll_sprite(idleSpriteIndex, 0, 1);
+        } else if(hoverAnimationCnt == 100) {
+            for(idleSpriteIndex = 0; idleSpriteIndex != 11; idleSpriteIndex++)
+                scroll_sprite(idleSpriteIndex, 0, 1);
+        } else if(hoverAnimationCnt == 130) {
+            for(idleSpriteIndex = 0; idleSpriteIndex != 11; idleSpriteIndex++)
+                scroll_sprite(idleSpriteIndex, 0, -1);
+
+            hoverAnimationCnt = 0;
+        } 
+    }
 }
