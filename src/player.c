@@ -3,6 +3,8 @@
 #include "../res/include/player-sprites.h"
 #include "include/player-animation.h"
 #include "include/utils.h"
+#include "../res/include/gustav-sprites.h"
+
 
 extern UBYTE shouldFlipSprite;
 
@@ -29,8 +31,8 @@ const UWORD playerSpritePalette[] = {
 };
 
 void setup_player() {
-    Player.position[0] = 63;
-    Player.position[1] = 78;
+    Player.position[0] = 70;
+    Player.position[1] = 115;
     Player.animation = 0x00;
 
     set_sprite_palette(0, 2, &playerSpritePalette[0]);
@@ -76,27 +78,31 @@ void handle_player_controller() {
         if(Player.animation != 0x11)
             Player.animation = 0x01;
 
-        if(direction != -1 && currentSpeed != 0)
-            move_player(direction, 1);
+        if(direction != -1 && currentSpeed != 0) {
+
+        }
+            // move_player(direction, 1);
         else {
             direction = -1;
-            move_player(direction, 0);
+            // move_player(direction, 0);
         }
     } else if(joypad() & J_RIGHT) {
         if(Player.animation != 0x12)
             Player.animation = 0x02;
 
-        if(direction != 1 && currentSpeed != 0)
-            move_player(direction, 1);
+        if(direction != 1 && currentSpeed != 0) {
+
+        }
+            // move_player(direction, 1);
         else {
             direction = 1;
-            move_player(direction, 0);
+            // move_player(direction, 0);
         }
     } else {
         if(Player.animation != 0x10 && currentSpeed == 0)
             Player.animation = 0x00;
 
-        move_player(direction, 1);
+        // move_player(direction, 1);
     }
 
     handle_player_animation();
