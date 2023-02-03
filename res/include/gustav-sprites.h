@@ -26,77 +26,18 @@
 /* Bank of tiles. */
 #define GustavSpritesBank 0
 
-/* Super Gameboy palette 0 */
-#define GustavSpritesSGBPal0c0 6076
-#define GustavSpritesSGBPal0c1 8935
-#define GustavSpritesSGBPal0c2 6596
-#define GustavSpritesSGBPal0c3 5344
-
-/* Super Gameboy palette 1 */
-#define GustavSpritesSGBPal1c0 6076
-#define GustavSpritesSGBPal1c1 8935
-#define GustavSpritesSGBPal1c2 6596
-#define GustavSpritesSGBPal1c3 5344
-
-/* Super Gameboy palette 2 */
-#define GustavSpritesSGBPal2c0 6076
-#define GustavSpritesSGBPal2c1 8935
-#define GustavSpritesSGBPal2c2 6596
-#define GustavSpritesSGBPal2c3 5344
-
-/* Super Gameboy palette 3 */
-#define GustavSpritesSGBPal3c0 6076
-#define GustavSpritesSGBPal3c1 8935
-#define GustavSpritesSGBPal3c2 6596
-#define GustavSpritesSGBPal3c3 5344
-
 /* Gameboy Color palette 0 */
 #define GustavSpritesCGBPal0c0 19507
-#define GustavSpritesCGBPal0c1 19507
-#define GustavSpritesCGBPal0c2 19507
-#define GustavSpritesCGBPal0c3 19507
+#define GustavSpritesCGBPal0c1 30653
+#define GustavSpritesCGBPal0c2 9818
+#define GustavSpritesCGBPal0c3 6578
 
 /* Gameboy Color palette 1 */
 #define GustavSpritesCGBPal1c0 19507
-#define GustavSpritesCGBPal1c1 28539
-#define GustavSpritesCGBPal1c2 9818
-#define GustavSpritesCGBPal1c3 6578
+#define GustavSpritesCGBPal1c1 30653
+#define GustavSpritesCGBPal1c2 0
+#define GustavSpritesCGBPal1c3 9818
 
-/* Gameboy Color palette 2 */
-#define GustavSpritesCGBPal2c0 19507
-#define GustavSpritesCGBPal2c1 32767
-#define GustavSpritesCGBPal2c2 9818
-#define GustavSpritesCGBPal2c3 6578
-
-/* Gameboy Color palette 3 */
-#define GustavSpritesCGBPal3c0 19507
-#define GustavSpritesCGBPal3c1 32767
-#define GustavSpritesCGBPal3c2 28539
-#define GustavSpritesCGBPal3c3 9818
-
-/* Gameboy Color palette 4 */
-#define GustavSpritesCGBPal4c0 19507
-#define GustavSpritesCGBPal4c1 32767
-#define GustavSpritesCGBPal4c2 0
-#define GustavSpritesCGBPal4c3 9818
-
-/* Gameboy Color palette 5 */
-#define GustavSpritesCGBPal5c0 6076
-#define GustavSpritesCGBPal5c1 8935
-#define GustavSpritesCGBPal5c2 6596
-#define GustavSpritesCGBPal5c3 5344
-
-/* Gameboy Color palette 6 */
-#define GustavSpritesCGBPal6c0 6076
-#define GustavSpritesCGBPal6c1 8935
-#define GustavSpritesCGBPal6c2 6596
-#define GustavSpritesCGBPal6c3 5344
-
-/* Gameboy Color palette 7 */
-#define GustavSpritesCGBPal7c0 6076
-#define GustavSpritesCGBPal7c1 8935
-#define GustavSpritesCGBPal7c2 6596
-#define GustavSpritesCGBPal7c3 5344
 /* CGBpalette entries. */
 extern const unsigned char GustavSpritesCGB[];
 /* Start of tile array. */
